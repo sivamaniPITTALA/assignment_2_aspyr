@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Client Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="chatBot">
+        <header>
+            <h2>Welcome to LiveChat</h2>
+            <button class="openbtn" onclick="toggleSidebar()">☰</button>
+            <button class="acc" style="height: 40px" style ="width: 40px;">⚉</button> <!-- Sidebar button in header -->
+        </header>
+        
+        <!-- Sidebar -->
+        <div id="mySidebar" class="sidebar">
+            <span class="closebtn" onclick="toggleSidebar()">×</span>
+            <a href="javascript:changeAccount()" style="color: #161515;">Change Account</a>
+            <a href="javascript:logout()" style="color: #161515;" >Logout</a>
+            <a onclick="cancel()" style="color: #161515;" >Close Chat</a>
+        </div>
+
+        <ul class="chatbox" id="messages"> 
+            <li class=""chat-incoming chat">
+            <p>Hey! How can I assist you today?</p>
+            </li>
+        </ul> <!-- Messages will be appended here -->
+        <div class="grid-container" id="grid-container"></div>
+
+        <!-- This is where you paste the input area and button -->
+        <div class="chat-input">
+            <textarea id="user-input" rows="0" cols="17" placeholder="Enter a message..."></textarea>
+            <button id="sendBTN">Send</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

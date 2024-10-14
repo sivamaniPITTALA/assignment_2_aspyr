@@ -1,0 +1,222 @@
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Chatbot Container */
+.chatBot {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    margin: 50px auto;
+    border: 3px solid #a308d2;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background-color: #a308d2;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 7px 7px 0 0;
+    position: relative;
+}
+
+header h2 {
+    color: #fff;
+    margin: 0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    right: -250px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 10;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    cursor: pointer;
+    color: #fff;
+}
+.acc{
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #a308d2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: absolute;
+    top: 1px;
+    left: 15px;
+    z-index: 10;
+}
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #a308d2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: absolute;
+    top: 1px;
+    right: 15px;
+    z-index: 10;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+.chatbox {
+    padding: 15px;
+    list-style: none;
+    overflow-y: auto;
+    height: 400px;
+}
+
+.chatbox li {
+    margin-bottom: 10px;
+}
+
+.chat p {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.chat-outgoing p {
+    background-color: #162887;
+    align-self: flex-end;
+    color: #fff;
+}
+
+.chat-incoming p {
+    background-color: #eaeaea;
+}
+
+.chat-input {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-input textarea {
+    width: 80%; /* Adjust width to leave space for the button */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    resize: none;
+    outline: none;
+    background-color: #dcdcdc85;
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    height: 25px;
+}
+/* Grid styling for the table */
+/* Ensure the grid container allows scrolling */
+.grid-container {
+    max-height: 300px; /* Set a height limit for the grid container */
+    overflow-y: auto; /* Enable vertical scrolling if the table is too long */
+    margin-top: 20px;
+}
+
+/* Grid styling for the table */
+.grid-container table {
+    width: 100%; /* Ensure the table takes full width of the container */
+    border-collapse: collapse;
+    margin: 0 auto; /* Center the table within the container */
+}
+
+/* Styling for table cells */
+.grid-container th, .grid-container td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    background-color: #f9f9f9;
+}
+
+.grid-container th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.grid-container tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.grid-container tr:hover {
+    background-color: #ddd;
+}
+
+/* Ensure that the chat messages have space */
+.chatbox {
+    height: 150px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+
+/* Ensure everything is visible inside the chat container */
+.chatBot {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+#sendBTN {
+    width: 18%; /* Adjusted to fit next to the textarea */
+    padding: 8px;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 7px;
+    background-color: #a308d2;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
